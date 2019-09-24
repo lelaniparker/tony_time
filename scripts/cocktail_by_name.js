@@ -18,6 +18,7 @@ function getJSON() {
 function showCocktail(data) {
     let drink = data.drinks[0];
     console.group(drink);
+    cocktail.innerHTML = "";
     // // create div card to display drink:
     const drinkImg = document.createElement('div');
     drinkImg.className = "drinkImg";
