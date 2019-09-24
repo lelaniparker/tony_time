@@ -1,20 +1,20 @@
-const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
-// const searchText = document.getElementById('searchText');
+let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const cocktail = document.getElementById('cocktail');
-const searchform = document.querySelector('.form');
+const searchForm = document.querySelector('.form');
+const submitButton = document.getElementById('submit');
 
 // asynchronous function to get the JSON document from the url
 function getJSON() {
     fetch(url).then(response => response.json())
-        .then(data => showCocktail(data));
-}
-getJSON();
-
-function showCocktail(data) {
-    console.log(data.drinks);
+        .then(data => showCocktail(data))
+        .catch(e => {
+            cocktail.innerHTML = "<h3>No results found</h3>";
+            console.error(e);
+        });
 }
 
 // function to display data in browser
+// WE COULD PUT THIS REPEATED CODE IN A SEPARATE FILE
 function showCocktail(data) {
     let drink = data.drinks[0];
     console.group(drink);
@@ -35,8 +35,9 @@ function showCocktail(data) {
 }
 
 // searchCocktail function
-// searchButton.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     url = url + searchText;
-//     getJSON();
-// });
+submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    let searchValue = document.getElementById('searchText').value;
+    url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchValue;
+    getJSON();
+});
