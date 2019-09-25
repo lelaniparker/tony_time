@@ -1,4 +1,4 @@
-let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
+let url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
 const cocktail = document.getElementById('cocktail');
 const searchForm = document.querySelector('.form');
 const submitButton = document.getElementById('submit');
@@ -36,18 +36,18 @@ function showCocktail(data) {
     card.innerHTML += drink.strMeasure3 + drink.strIngredient3 + "<br />";
     card.innerHTML += drink.strMeasure4 + drink.strIngredient4 + "<br />";
     card.innerHTML += drink.strMeasure5 + drink.strIngredient5 + "<br /><br />";
-    card.innerHTML += "<b>Instructions: </b><br />" + drink.strInstructions ;
+    card.innerHTML += "<b>Instructions: </b><br />" + drink.strInstructions;
 }
 
 // searchCocktail function
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     let searchValue = document.getElementById('searchText').value;
-    url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchValue;
+    url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + searchValue;
     getJSON();
     clearSearchValue();
 });
 
-function clearSearchValue(){
-    document.getElementById("searchText").value="";
+function clearSearchValue() {
+    document.getElementById("searchText").value = "";
 }

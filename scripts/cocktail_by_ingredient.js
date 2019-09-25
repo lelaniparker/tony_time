@@ -16,10 +16,11 @@ function getJSON() {
 // function to display data in browser
 // WE COULD PUT THIS REPEATED CODE IN A SEPARATE FILE
 function showCocktail(data) {
-    let drink = data.drinks[0];
+    let drink = data.drinks;
+
     console.group(drink);
     cocktail.innerHTML = "";
-    // // create div card to display drink:
+    //create div card to display drink:
     const drinkImg = document.createElement('div');
     drinkImg.className = "drinkImg";
     cocktail.appendChild(drinkImg);
@@ -27,16 +28,9 @@ function showCocktail(data) {
     card.className = "card";
     cocktail.appendChild(card);
 
-    drinkImg.innerHTML = "<img src='" + drink.strDrinkThumb + "' style='margin: 0px;'> ";
-    card.innerHTML += "<b>Name:</b> ";
-    card.innerHTML += drink.strDrink + "<br /><br />";
-    card.innerHTML += "<b>Ingredients:</b> <br />";
-    card.innerHTML += drink.strMeasure1 + drink.strIngredient1 + "<br />";
-    card.innerHTML += drink.strMeasure2 + drink.strIngredient2 + "<br />";
-    card.innerHTML += drink.strMeasure3 + drink.strIngredient3 + "<br />";
-    card.innerHTML += drink.strMeasure4 + drink.strIngredient4 + "<br />";
-    card.innerHTML += drink.strMeasure5 + drink.strIngredient5 + "<br /><br />";
-    card.innerHTML += "<b>Instructions: </b><br />" + drink.strInstructions;
+    // add loop to itterate through array to display cocktail names
+    for (i = 0; i < drink.length; i++)
+        document.getElementById("cocktailName").innerHTML += " <br />" + "<b>Name:</b> " + drink[i].strDrink + " <br />" + "<img src='" + drink[i].strDrinkThumb + "' style='height: 270px;'> " + " <br />" + " <br />";
 }
 
 // searchCocktail function
