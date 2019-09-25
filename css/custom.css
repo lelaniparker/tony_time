@@ -110,12 +110,26 @@ img {
   padding: px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.509);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.509);
+  margin-left: 43px;
 }
 
 .cocktail {
   width: 1000px;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  margin-bottom: 80px;
+}
+
+#cocktailName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=custom.css.map */
