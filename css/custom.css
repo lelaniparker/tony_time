@@ -132,4 +132,9 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
+#alphabet {
+  width: 280px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=custom.css.map */
