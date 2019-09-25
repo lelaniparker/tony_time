@@ -118,4 +118,9 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+#alphabet {
+  width: 280px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=custom.css.map */
