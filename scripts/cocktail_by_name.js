@@ -1,4 +1,4 @@
-let url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
+let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const cocktail = document.getElementById('cocktail');
 const searchForm = document.querySelector('.form');
 const submitButton = document.getElementById('submit');
@@ -43,7 +43,7 @@ function showCocktail(data) {
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     let searchValue = document.getElementById('searchText').value;
-    url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + searchValue;
+    url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchValue;
     getJSON();
     clearSearchValue();
 });
