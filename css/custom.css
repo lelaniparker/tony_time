@@ -17,6 +17,13 @@
   color: pink;
 }
 
+body {
+  border: solid;
+  margin: 50px;
+  -webkit-box-shadow: 0 30px 30px rgba(0, 0, 0, 0.564);
+          box-shadow: 0 30px 30px rgba(0, 0, 0, 0.564);
+}
+
 h1 {
   text-align: center;
   font-weight: bold;
@@ -101,5 +108,7 @@ img {
   width: 300px;
   margin: 50px;
   padding: px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.509);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.509);
 }
 /*# sourceMappingURL=custom.css.map */

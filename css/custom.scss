@@ -13,6 +13,12 @@
     }
 }
 
+body {
+    border: solid;
+    margin: 50px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.564);
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
@@ -25,6 +31,7 @@ h1 {
 
 #search-box {
     text-align: center;
+    
 }
 
 .search-box input {
@@ -70,4 +77,5 @@ img {
     width: 300px;
     margin: 50px;
     padding: px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.509);
 }
