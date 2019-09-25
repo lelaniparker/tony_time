@@ -30,7 +30,12 @@ function showCocktail(data) {
 
     // add loop to itterate through array to display cocktail names
     for (i = 0; i < drink.length; i++)
-        document.getElementById("cocktailName").innerHTML += " <br />" + "<b>Name:</b> " + drink[i].strDrink + " <br />" + "<img src='" + drink[i].strDrinkThumb + "' style='height: 270px;'> " + " <br />" + " <br />";
+        document.getElementById("cocktailName").innerHTML += " <br />" + "<b>Name: </b> " + drink[i].strDrink + " <br />" + "<img src='" + drink[i].strDrinkThumb + "' style='height: 270px;'> " + " <br />" + " <br />";
+    for (i = 0; i < drink.length; i++)
+        webLink = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + drink[i].strDrink;
+    webAddress = webLink.replace(/\s+/g, '');
+    console.log(webLink);
+    console.log(webAddress);
 }
 
 // searchCocktail function
