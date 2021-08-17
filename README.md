@@ -1,3 +1,3 @@
 # tony_time
 
-http://lelaniparker.design/tony_time/
+https://lelaniparker.github.io/tony_time/
